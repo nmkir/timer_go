@@ -1,0 +1,20 @@
+name: Dify Morning Run
+
+on:
+  schedule:
+    # 毎日午前8時（日本時間）に実行
+    # UTCでは-9時間の前日午後11時になる
+    - cron: '0 23 * * *'
+
+jobs:
+  run-dify-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Dify API
+        run: |
+          curl --request POST \
+          --url 'YOUR_DIFY_API_ENDPOINT' \
+          --header 'Authorization: Bearer YOUR_API_KEY' \
+          --header 'Content-Type: application/json' \
+          --data '{}'
