@@ -15,7 +15,7 @@ jobs:
       - name: Call Dify API
         run: |
           curl --request POST \
-          --url 'https://api.dify.ai/v1' \
+          --url 'https://api.dify.ai/v1/workflows/run' \
           --header 'Authorization: Bearer app-bfNIVgyHLnn1bc7GwQ7hkGLN' \
           --header 'Content-Type: application/json' \
           --data '{}'
