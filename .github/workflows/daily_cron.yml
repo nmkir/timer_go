@@ -5,6 +5,7 @@ on:
     # 毎日午前8時（日本時間）に実行
     # UTCでは-9時間の前日午後11時になる
     - cron: '0 23 * * *'
+  workflow_dispatch: # これを追加することで手動実行が可能になります
 
 jobs:
   run-dify-api:
@@ -14,7 +15,7 @@ jobs:
       - name: Call Dify API
         run: |
           curl --request POST \
-          --url 'https://api.dify.ai/v1' \
-          --header 'Authorization: Bearer app-bfNIVgyHLnn1bc7GwQ7hkGLN' \
+          --url 'YOUR_DIFY_API_ENDPOINT' \
+          --header 'Authorization: Bearer YOUR_API_KEY' \
           --header 'Content-Type: application/json' \
           --data '{}'
