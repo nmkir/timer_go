@@ -18,4 +18,4 @@ jobs:
           --url 'https://api.dify.ai/v1/workflows/run' \
           --header 'Authorization: Bearer app-bfNIVgyHLnn1bc7GwQ7hkGLN' \
           --header 'Content-Type: application/json' \
-          --data '{}'
+          --data '{"inputs": {}, "user": "k16"}'
